@@ -23,5 +23,11 @@ namespace CarDealer.Controllers
       newCar.Save();
       return View("Index", Car.GetAll());
     }
+    [HttpPost("/cars/delete")]
+    public ActionResult DeleteAll()
+    {
+        Car.ClearAll();
+        return View();
+    }
   }
 }
