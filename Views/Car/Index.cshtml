@@ -1,0 +1,14 @@
+
+<h1>Austin and Noah's Awesome Car List</h1>
+<ul>
+@foreach(var Car in Model)
+{
+  <ul>@Car.GetBrand()
+  <li>Model: @Car.GetModel(), Price: $@Car.GetPrice()</li>
+  </ul>
+}
+</ul>
+<p><a href="/cars/new">Add another car</a></p>
+<form action="/cars/delete" method="post">
+<button type="submit" name="button">Clear All Items</button>
+</form>
